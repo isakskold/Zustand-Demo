@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zustand Demo in Next.js
 
-## Getting Started
+## What is Zustand?
 
-First, run the development server:
+Zustand is a tool to manage states on a global level in a react applications. Zustand is lightweight and easy to use, allowing any component to fetch a state, without prop drilling or wrapping providers using useContext.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to use Zustand?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Simply create a "store" file. For example, if the store should keep state data about a counter you would typically name the file "useCounterStore". In this store you can define states and setter functions that can modify this state.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How do I use a Zustand store in my components?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See app/page.tsx and app/buttonPage/page.tsx to see how it is being used. Simply import the store. Select the state or setter function from the store and save it to a variable so it can be used. Changing the state in the button page will also update the state when navigating back to the default route.
 
-## Learn More
+## What are the benefits of using Zustand?
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+It is easy to use. It does not require much boilerplate code to set up. Very scaleable, it lets developers create their functional components with state logic and the developer can be sure the component is able to access the state easily from the zustand store, even if the developer does not know where the component will be used in the project later. No need to wrap providers around specific part of the app to make it work. Zustand stores are global across the whole project by default.
