@@ -10,7 +10,7 @@ Simply create a "store" file. For example, if the store should keep state data a
 
 ## How do I use a Zustand store in my components?
 
-See app/page.tsx and app/buttonPage/page.tsx to see how it is being used. Simply import the store. Select the state or setter function from the store and save it to a variable so it can be used. Changing the state in the button page will also update the state when navigating back to the default route.
+See src/app/page.tsx and src/app/buttonPage/page.tsx to see how it is being used. Simply import the store. Select the state or setter function from the store and save it to a variable so it can be used. Changing the state in the button page will also update the state when navigating back to the default route.
 
 ## What are the benefits of using Zustand?
 
